@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       referral_id:
-        description: 'Apna Referral ID Dalein'
+        description: 'https://t.me/TxAiEarn_bot?start=1122334455'
         required: true
         default: '12345'
 
