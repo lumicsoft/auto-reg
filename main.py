@@ -6,7 +6,7 @@ import sys
 
 # --- CONFIGURATION ---
 # Yahan us website ka registration URL dalein jahan ID lagani hai
-TARGET_URL = "https://example.com/api/register" 
+TARGET_URL = "https://t.me/TxAiEarn_bot?start=1122334455" 
 
 def generate_fake_data():
     """Random Name aur Mobile Number banane ke liye"""
@@ -15,7 +15,7 @@ def generate_fake_data():
     mobile = "9" + "".join(random.choices(string.digits, k=9))
     return name, mobile
 
-def run_task(ref_id, count=15):
+def run_task(ref_id, count=2):
     print(f"🚀 Starting {count} registrations for Ref: {ref_id}")
     
     for i in range(1, count + 1):
