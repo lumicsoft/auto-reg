@@ -1,0 +1,27 @@
+name: Auto Registration Bot
+
+on:
+  workflow_dispatch:
+    inputs:
+      referral_id:
+        description: 'Apna Referral ID Dalein'
+        required: true
+        default: '12345'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install Requests
+        run: pip install requests
+
+      - name: Run Script
+        run: python main.py ${{ github.event.inputs.referral_id }}
